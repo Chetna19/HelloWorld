@@ -1,0 +1,173 @@
+<core:View xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" xmlns="sap.suite.ui.commons"  xmlns:m="sap.m"
+    height="100%" width="100%" xmlns:viz="sap.viz.ui5.controls"
+		controllerName="columnchartdemoapp.FirstPage" xmlns:html="http://www.w3.org/1999/xhtml">
+	
+  
+
+    <!-- <ScrollContainer height="100%" width="100%" horizontal="false" vertical="true" focusable="true"> -->
+        <viz:Popover id="idPopOver"></viz:Popover>
+        <viz:VizFrame id="idVizFrameBar" uiConfig="{applicationSet:'fiori'}" vizType="bar" width="100%" height="700px"></viz:VizFrame>
+   <!--  </ScrollContainer> -->
+
+  		
+  		
+  	<!-- 	
+  		              ********************Bullet Chart***********************
+<BulletChart width="500px" height="500px" size="XS" scale="M" targetValue="100" forecastValue="110" class="marginTopLeft" press="press" scaleColor="MediumLight">
+      <actual>
+        <BulletChartData value="120" color="Good"/>
+      </actual>
+      <thresholds>
+        <BulletChartData value="0" color="Error"/>
+        <BulletChartData value="50" color="Critical"/>
+        <BulletChartData value="150" color="Critical"/>
+        <BulletChartData value="200" color="Error"/>
+      </thresholds>
+    </BulletChart> 
+    <BulletChart size="S" scale="M" targetValue="100" forecastValue="110" class="marginTopLeft" press="press">
+      <actual>
+        <BulletChartData value="120" color="Good"/>
+      </actual>
+      <thresholds>
+        <BulletChartData value="0" color="Error"/>
+        <BulletChartData value="50" color="Critical"/>
+        <BulletChartData value="150" color="Critical"/>
+        <BulletChartData value="200" color="Error"/>
+      </thresholds>
+    </BulletChart> 
+    <BulletChart size="M" scale="M" targetValue="100" forecastValue="110" class="marginTopLeft" press="press">
+      <actual>
+        <BulletChartData value="120" color="Good"/>
+      </actual>
+      <thresholds>
+        <BulletChartData value="0" color="Error"/>
+        <BulletChartData value="50" color="Critical"/>
+        <BulletChartData value="150" color="Critical"/>
+        <BulletChartData value="200" color="Error"/>
+      </thresholds>
+    </BulletChart> 
+   
+						********************Column Micro Chart***********************
+
+  <ColumnMicroChart width="500px" height="200px" size="Auto" press="press" class="marginTopLeft">
+       <leftTopLabel>
+         <ColumnMicroChartLabel label="June 1" color="Good"/>
+       </leftTopLabel>
+       <rightTopLabel>
+         <ColumnMicroChartLabel label="June 30" color="Critical"/>
+       </rightTopLabel>
+       <leftBottomLabel>
+         <ColumnMicroChartLabel label="0M" color="Good"/>
+       </leftBottomLabel>
+       <rightBottomLabel>
+         <ColumnMicroChartLabel label="80M" color="Critical"/>
+       </rightBottomLabel>
+      <columns>
+      <ColumnData  value="60" color="Error"/>
+      <ColumnData  value="80" color="Error"/>
+      <ColumnData  value="100" color="Error"/>
+      <ColumnData  value="60" color="Neutral"/>
+      <ColumnData  value="55" color="Neutral"/>
+      <ColumnData  value="15" color="Neutral"/>
+       <ColumnData  value="70" color="Error"/>
+    </columns>
+    </ColumnMicroChart>
+  <ColumnMicroChart size="Auto" press="press" class="marginTopLeft">
+       <leftTopLabel>
+         <ColumnMicroChartLabel label="June 1"/>
+       </leftTopLabel>
+       <rightTopLabel>
+         <ColumnMicroChartLabel label="June 30"/>
+       </rightTopLabel>
+       <leftBottomLabel>
+         <ColumnMicroChartLabel label="0M"/>
+       </leftBottomLabel>
+       <rightBottomLabel>
+         <ColumnMicroChartLabel label="80M"/>
+       </rightBottomLabel>
+      <columns>
+      <ColumnData  value="65" color="Error"/>
+      <ColumnData  value="90" color="Error"/>
+      <ColumnData  value="75" color="Error"/>
+      <ColumnData  value="95" color="Error"/>
+      <ColumnData  value="100" color="Error"/>
+      <ColumnData  value="90" color="Error"/>
+      <ColumnData  value="80" color="Error"/>
+      <ColumnData  value="35" color="Neutral"/>
+      <ColumnData  value="65" color="Neutral"/>
+      <ColumnData  value="55" color="Neutral"/>
+      <ColumnData  value="60" color="Neutral"/>
+      <ColumnData  value="5" color="Neutral"/>
+      <ColumnData  value="15" color="Neutral"/>
+      <ColumnData  value="15" color="Neutral"/>
+    </columns>
+    </ColumnMicroChart>
+    
+  									********************Comparison Micro Chart***********************
+  
+  <ComparisonChart scale="M" view="Wide" class="marginTopLeft" press="press" width="32rem">
+        <data>
+          <ComparisonData  title="Americas" value="10" color="Critical"/>
+          <ComparisonData  title="EMEA" value="50" color="Good"/>
+          <ComparisonData  title="APAC" value="-20" color="Error"/>
+        </data>
+    </ComparisonChart>
+  <ComparisonChart scale="M" view="Wide" class="marginTopLeft" press="press" width="32rem">
+        <data>
+          <ComparisonData  title="Americas" value="10" color="Critical"/>
+          <ComparisonData  title="EMEA" value="50" color="Good"/>
+          <ComparisonData  title="APAC" value="-20"  color="Error"/>
+          <ComparisonData  title="LTA" value="60"  color="Good"/>
+          <ComparisonData  title="ALPS" value="-20" color="Error"/>
+          <ComparisonData  title="Australia" value="55" color="Good"/>        
+        </data>
+    </ComparisonChart>
+    
+  								********************Comparison Micro Chart with color palette***********************
+  
+  <ComparisonChart size="M" scale="M" class="marginTopLeft" press="press"
+    colorPalette="[#5cbae6, #b6d957, #fac364, #8cd3ff, #d998cb, #f2d249, #93b9c6, #ccc5a8, #52bacc, #dbdb46, #98aafb]">
+        <data>
+          <ComparisonData  title="Americas" value="10"/>
+          <ComparisonData  title="EMEA" value="50"/>
+          <ComparisonData  title="APAC" value="-20"/>
+          <ComparisonData  title="LTA" value="60"/>
+          <ComparisonData  title="ALPS" value="-20"/>
+          <ComparisonData  title="Australia" value="55"/>
+        </data>
+    </ComparisonChart>
+  
+    
+  									********************Delta Micro Chart***********************
+    
+  <DeltaMicroChart size="M" press="press" value1="105" value2="98" title1="May 2014" title2="Apr 2014" displayValue1="105 Mio" displayValue2="98 Mio" deltaDisplayValue="7 Mio" color="Good" class="marginTopLeft"/>
+  <DeltaMicroChart size="M" press="press" value1="-105" value2="-98" title1="May 2014" title2="Apr 2014" displayValue1="-105 Mio" displayValue2="-98 Mio" deltaDisplayValue="7 Mio" color="Error"  class="marginTopLeft"/>
+  <DeltaMicroChart size="M" press="press" value1="-7" value2="16" title1="May 2014" title2="Apr 2014" displayValue1="-7 Mio" displayValue2="16 Mio" deltaDisplayValue="23 Mio" color="Critical"  class="marginTopLeft"/>
+
+  
+  									********************HarveyBallMicroChart***********************
+  
+   <HarveyBallMicroChart size="M" total="100" totalScale="Mrd" showTotal="true" showFractions="true" press="press">
+    <items>
+      <HarveyBallMicroChartItem fraction="63.5" color="Good" valueScale="Mrd" /> 
+    </items>
+  </HarveyBallMicroChart>
+  <HarveyBallMicroChart size="S" total="100" totalScale="Mrd" showTotal="true" showFractions="true" press="press">
+    <items>
+      <HarveyBallMicroChartItem fraction="63.5" color="Good" fractionScale="Mrd" /> 
+    </items>
+  </HarveyBallMicroChart>
+  <HarveyBallMicroChart size="M" total="100" totalScale="Mrd" colorPalette="#5cbae6" press="press">
+    <items>
+      <HarveyBallMicroChartItem fraction="20" fractionScale="Mrd" /> 
+    </items>
+  </HarveyBallMicroChart>
+  
+
+<NumericContent size="M" value="65.5" scale="MM" valueColor="Error" indicator="Down" state="Loaded"  icon="sap-icon://travel-expense" class="marginTopLeft" press="press"/>
+  
+ -->
+     
+   
+</core:View>
